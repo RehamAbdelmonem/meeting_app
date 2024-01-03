@@ -20,7 +20,7 @@ class HistoryMeetingScreen extends StatelessWidget {
           itemCount: (snapshot.data! as dynamic).docs.length,
           itemBuilder: (context, index) => ListTile(
             title: Text(
-              'Room Name:  ${(snapshot.data! as dynamic).docs[index]['meetingName']}',
+              'Room Name:  ${(snapshot.data! as dynamic).docs[index]['meetingName']}',style: const TextStyle(fontSize: 20)
             ),
             subtitle: Text(
               'Joined on:  ${DateFormat.yMMMMd().format((snapshot.data! as dynamic).docs[index]['createdAt'].toDate())}',

@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:zoom_app/resources/jitsi_meet_methods.dart';
+import 'package:zoom_app/screens/schedule_screen.dart';
 import 'package:zoom_app/widgets/home_meeting_button.dart';
 
 class MeetingScreen extends StatelessWidget {
@@ -40,7 +41,13 @@ class MeetingScreen extends StatelessWidget {
               icon: Icons.add_box_rounded,
             ),
             HomeMeetingButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ScheduleMeetingScreen()),
+                );
+              },
               text: 'Schedule',
               icon: Icons.calendar_today,
             ),

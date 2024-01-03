@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:zoom_app/firebase_options.dart';
 import 'package:zoom_app/resources/auth_methods.dart';
+import 'package:zoom_app/screens/settings_screen.dart';
 import 'package:zoom_app/screens/video_call_screen.dart';
 import 'package:zoom_app/utils/colors.dart';
 import 'screens/home_screen.dart';
@@ -30,6 +31,7 @@ class ZoomApp extends StatelessWidget {
         '/login': (context) => const LoginScreen(),
         '/home': (context) => const HomeScreen(),
         '/video-call':(context) => const VideoCallScreen(),
+        '/settings':(context) => const SettingScreen(),
       },
       home: StreamBuilder(
           stream: AuthMethods().authChanges,

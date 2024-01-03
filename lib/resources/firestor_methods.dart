@@ -25,4 +25,6 @@ class FirestoreMethods {
       print(e);
     }
   }
+
+  void scheduleMeeting({required String meetingName, required DateTime scheduledDateTime}) {}
 }
